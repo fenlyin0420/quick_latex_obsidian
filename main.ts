@@ -1855,12 +1855,12 @@ export default class QuickLatexPlugin extends Plugin {
 		if (!view) return;
 		if (!this.settings.addMatrixBlock_toggle) return;
 		editor.replaceSelection(
-			'\\begin{' + this.settings.addMatrixBlock_parameter + '}' +
+			'\\begin{' + this.settings.addMatrixBlock_parameter + '}\n' +
+			'\n' +
 			'\\end{' + this.settings.addMatrixBlock_parameter + '}'
 		);
 		const position = editor.getCursor();
-		const retract_length = ('\\end{' + this.settings.addMatrixBlock_parameter + '}').length
-		editor.setCursor({ line: position.line, ch: position.ch - retract_length })
+		editor.setCursor({ line: position.line - 1, ch: editor.getLine(position.line - 1).length })
 	}
 
 	private addCasesBlock(editor: Editor) {
