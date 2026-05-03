@@ -581,7 +581,7 @@ export default class QuickLatexPlugin extends Plugin {
 							};
 					}
 					if (state) {
-						editor.replaceSelection(' \\\\ ')
+						editor.replaceSelection('\\\\\n')
 						return true
 					}
 				}
@@ -1182,7 +1182,7 @@ export default class QuickLatexPlugin extends Plugin {
 						}
 						if (!event.shiftKey) {
 							if (state) {
-								editor.replaceSelection(' \\\\ ')
+								editor.replaceSelection('\\\\\n')
 								event.preventDefault();
 								return
 							}
