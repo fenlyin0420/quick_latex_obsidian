@@ -4,6 +4,10 @@
 Thank you so much for using this plugin! I do hope it has been helpful. There is now a more powerful and well maintained Latex writing plugin that I highly recommend : [Latex Suite](https://github.com/artisticat1/obsidian-latex-suite).
 Thank you!
 
+**v 2.6.6**
+* Fix: matrix block insert adds blank line between begin/end, cursor placed on it
+* Fix: matrix block Enter now inserts \\ and newline instead of inline \\
+
 **v 2.6.3 - 2.6.5**
 * bug fixes
 
@@ -32,7 +36,7 @@ This simple plugin adds various shortcuts to speedup latex math typing.
 * Typing **\$** will automatically close with **\$** and shift the cursor in between the **\$\$** symbols.
 * **Tip:** If you use the \$ symbol often as currency symbol, you may toggle off the "auto close math symbol" function in the plugin setting. Alternatively, type "\\$" to insert a $ symbol without triggering the auto close function.
 
-![auto Move into Math](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoCloseMath.gif)
+![auto Move into Math](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoCloseMath.gif)
 
 ### 2. Autoclose {}, [], () brackets
 * Typing **"{"**, **"["** and **"("** will automatically close with **"}"**,**"]"** or **")"**.
@@ -44,13 +48,13 @@ This simple plugin adds various shortcuts to speedup latex math typing.
 ### 4. Auto enlarge brackets that contains \sum, \int or \frac
 * Place cursor right after a () or [] bracketed expression that contains either \sum, \int or \frac and press the space key, the outermost brackets will be appended with \left and \right in order to display larger brackets to enclose these big expressions. E.g. (\sum\limits_{i=1}^n x+1) => **\left**(\sum\limits_{i=1}^n x+1 **\right**)
 
-![auto Enlarge Bracket](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoEnlargeBracket.gif)
+![auto Enlarge Bracket](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoEnlargeBracket.gif)
 
 ### 5. Auto enclose expression after superscipt and subscript with {}
 * Typing expressions after superscript **"^"** and subscript **"_"** symbol follow by a **"space" key** will automatically surround the expressions with **"{}"**.
 * NOTE: if you are use to typing subscript indexing without enclosing it with {}, there is high tendency that the autoEncloseSubscript function may miss fire when you press space after a subscript symbol not intended to be bracketed. In this case, its recommended to turn off this function.
 
-![auto Enclose Superscript](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoEncloseSup.gif)
+![auto Enclose Superscript](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoEncloseSup.gif)
 
 ### 6. Enclose selected expression with math symbol
 * Select an expression and press "$" key will automatically enclose the expression with the math symbols.
@@ -58,19 +62,19 @@ This simple plugin adds various shortcuts to speedup latex math typing.
 ### 7. Auto Fraction - Type "/" instead of \frac{}{}.
 * Type **\$e/2\$** followed by a **"space" key** will automatically replace the expression with **\$\frac{e}{2}\$**.
 
-![auto Fraction](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoFraction.gif)
+![auto Fraction](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoFraction.gif)
 
 * **Tip 1:** Enclose your fraction expression within round brackets () will help the system identify the boundaries of your fraction.
 
-![auto Fraction 1](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoFraction1%20-%20enclose%20with%20round%20bracket.gif)
+![auto Fraction 1](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoFraction1%20-%20enclose%20with%20round%20bracket.gif)
 
 * **Tip 2:** Put a **space** infront of fraction to denote the start of the fraction. Especially useful for series of fractions!
 
-![auto Fraction 2](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoFraction2%20-%20space.gif)
+![auto Fraction 2](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoFraction2%20-%20space.gif)
 
 * **Tip 3:** For longer numerator or denominator expressions (especially when the expressions have white spaces which may trigger the frac-replace prematurely), enclose the expressions in round brackets **()**.
 
-![auto Fraction 3](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_autoFraction3%20-%20numeratordenominator.gif)
+![auto Fraction 3](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_autoFraction3%20-%20numeratordenominator.gif)
 
 * **Tip 4:** The plugin will remove the outermost brackets in numerator and denominator.
 
@@ -89,7 +93,7 @@ This simple plugin adds various shortcuts to speedup latex math typing.
 * **Tip 4: Edit Short Cut**
     * You may edit the shortcut keys in **Settings -> Hotkeys**
 
-![add Align Block](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_alignblock.gif)
+![add Align Block](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_alignblock.gif)
 
 ### 9. Shortcut for Matrix Block
 * use "Alt+Shift+M" (Mac: "Option+Shift+M") shortcut key to quickly insert **\begin{pmatrix} \end{pmatrix}** block
@@ -105,7 +109,7 @@ This simple plugin adds various shortcuts to speedup latex math typing.
 * **Tip 3: Edit Short Cut**
     * You may edit the shortcut keys in **Settings -> Hotkeys**
 
-![add Matrix Block](https://raw.githubusercontent.com/joeyuping/quick_latex_obsidian/master/demo_gif/g_matrixblock.gif)
+![add Matrix Block](https://raw.githubusercontent.com/fenlyin0420/quick_latex_obsidian/master/demo_gif/g_matrixblock.gif)
 
 ### 10. Tab & Shift-Tab to jump from brackets to brackets
 use Tab and Shift-Tab within math expressions to quickly jump from brackets to brackets. 
@@ -150,7 +154,7 @@ bi:::\\binom{#cursor}{#tab};
 
 ---
 ## Source Code:
-see https://github.com/joeyuping/quick_latex_obsidian
+see https://github.com/fenlyin0420/quick_latex_obsidian
 
 ## Support
 Really hope this plugin has been helpful!
